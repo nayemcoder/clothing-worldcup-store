@@ -918,6 +918,179 @@ button[type="button"]:hover {
   transition: all 0.2s ease;
 }
 
+/* Smooth transitions for all interactive elements */
+* {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+button,
+a {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth page transitions */
+header {
+  box-shadow: 0 2px 8px rgba(17, 19, 24, 0.08);
+  background: var(--white);
+  transition: box-shadow 0.3s ease;
+}
+
+header:hover {
+  box-shadow: 0 4px 12px rgba(17, 19, 24, 0.12);
+}
+
+/* Product card hover effects */
+.product-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(17, 19, 24, 0.15);
+}
+
+/* Admin row styling improvements */
+.admin-row {
+  border-left: 4px solid var(--green);
+  transition: all 0.2s ease;
+}
+
+.admin-row:hover {
+  background: rgba(15, 138, 95, 0.03);
+}
+
+/* Input focus states */
+input:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(15, 138, 95, 0.1);
+  border-color: var(--green) !important;
+  transition: all 0.2s ease;
+}
+
+/* Button active states */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Icon animations */
+svg {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+button:hover svg {
+  transform: scale(1.1);
+}
+
+/* Cart pill animation */
+.cart-pill:hover {
+  transform: scale(1.05);
+}
+
+/* Form label styling */
+label {
+  font-weight: 500;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+/* Smooth message fade */
+.toast-message {
+  animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(17, 19, 24, 0.2);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Smooth page fade in */
+main {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loading state for buttons */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Smooth link hover states */
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  color: var(--green);
+}
+
+/* Navigation link underline animation */
+nav a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--green);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Smooth backdrop blur for modals/overlays */
+.modal-overlay {
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
+}
+
+/* Professional spacing and padding */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="number"]:hover,
+textarea:hover {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(15, 138, 95, 0.05);
+}
+
 /* Icons inline styling */
 [data-lucide] {
   stroke: currentColor;

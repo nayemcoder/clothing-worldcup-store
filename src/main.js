@@ -1049,8 +1049,7 @@ function bindEvents() {
       button.textContent = 'Updating...'
       await updateProductPrice(productId, newPrice)
       button.disabled = false
-      button.innerHTML = '<i data-lucide="save" style="width:16px;height:16px;margin-right:4px;display:inline;vertical-align:-2px"></i>Update'
-      createIcons()
+      button.innerHTML = `${renderIcon('save')}Update`
     })
   })
 }

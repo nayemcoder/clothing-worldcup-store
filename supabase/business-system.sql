@@ -123,7 +123,7 @@ for each row execute function public.handle_new_user();
 create or replace function public.is_admin()
 returns boolean
 language sql
-security definer
+security invoker
 set search_path = public
 as $$
   select exists (
